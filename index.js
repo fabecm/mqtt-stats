@@ -3,12 +3,12 @@ var mqtt = require('mqtt');
 var client = undefined;
 var projectName = undefined;
 
-var init = function(name, host, conf) {
+var init = function(name, host, mqttObject) {
     if (!name || !host) {
         return;
     }
 
-    client = mqtt.connect(host, conf);
+    client = mqtt.connect(host, mqttObject);
 
     client.on('connect', function() {
         client.subscribe(projectName + '/presence', function() {
