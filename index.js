@@ -18,7 +18,7 @@ var init = function(name, host, mqttObject) {
 
 }
 
-var express = function(req, res, time) {
+var express = function(req, res) {
     if (req.method === 'OPTIONS' && res.statusCode === 204) {
         return;
     }
