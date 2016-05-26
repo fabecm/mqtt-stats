@@ -1,17 +1,18 @@
 {
-    "name": "crispy-stats",
-    "version": "0.0.1",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "author": "",
-    "license": "ISC",
-    "dependencies": {
-        "mqtt": "^1.10.0"
-    },
-    "bin": {
-        "crispy-stats": "./index.js"
-    }
+  "name": "crispy-stats",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.13.1",
+    "mqtt": "^1.10.0"
+  },
+  "bin": {
+    "crispy-stats": "./index.js"
+  }
 }

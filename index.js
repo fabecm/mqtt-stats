@@ -1,4 +1,5 @@
 var mqtt = require('mqtt');
+var _ = require('lodash');
 
 var client = undefined;
 var projectName = undefined;
@@ -23,15 +24,15 @@ var express = function(req, res) {
         return;
     }
 
-    client.publish(projectName + '/calls', "true");
+    client.publish(projectName + '/calls', JSON.stringify(req.method));
 }
 
 var episode = function(eventName, data) {
-    if (!data) {
+    if (JSON.stringify(data).length == 0) {
         data = "true";
     }
 
-    client.publish(projectName + '/episode/' + eventName, "true");
+    client.publish(projectName + '/episode/' + eventName, JSON.stringify(data));
 }
 
 module.exports = {
