@@ -9,6 +9,8 @@ var init = function(name, host, mqttObject) {
         return;
     }
 
+    projectName = name;
+
     client = mqtt.connect(host, mqttObject);
 
     client.on('connect', function() {
@@ -19,15 +21,23 @@ var init = function(name, host, mqttObject) {
 
 }
 
-var express = function(req, res) {
+var express = function(req, res, next) {
     if (req.method === 'OPTIONS' && res.statusCode === 204) {
         return;
     }
 
     client.publish(projectName + '/calls', JSON.stringify(req.method));
+
+    if(next){
+        next();
+    }
 }
 
 var episode = function(eventName, data) {
+    if (!eventName || eventName.length == 0) {
+        eventName = "default";
+    }
+
     if (JSON.stringify(data).length == 0) {
         data = "true";
     }
