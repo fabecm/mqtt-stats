@@ -1,12 +1,12 @@
 {
-  "name": "crispy-stats",
+  "name": "mqtt-stats",
   "version": "0.0.1",
-  "description": "",
+  "description": "MQTT Stats for Node.js",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Fabio Bellini",
   "license": "ISC",
   "dependencies": {
     "lodash": "^4.13.1",
@@ -14,5 +14,21 @@
   },
   "bin": {
     "crispy-stats": "./index.js"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fabecm/mqtt-stats.git"
+  },
+  "keywords": [
+    "\"mqtt\"",
+    "\"client\"",
+    "\"node.js\"",
+    "\"stats\"",
+    "\"analitycs\""
+  ],
+  "bugs": {
+    "url": "https://github.com/fabecm/mqtt-stats/issues"
+  },
+  "homepage": "https://github.com/fabecm/mqtt-stats#readme"
 }
