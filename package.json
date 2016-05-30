@@ -1,6 +1,6 @@
 {
   "name": "mqtt-stats",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "MQTT Stats for Node.js",
   "main": "index.js",
   "scripts": {
